@@ -9,7 +9,7 @@ $transition: 0.2s all ease-in-out;
 
 .app {
     width: 100%;
-    min-height: 100vh;
+    min-height: 93vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,8 +24,10 @@ $transition: 0.2s all ease-in-out;
 }
 .appContainer {
     width: $width;
+    min-height: 100vh;
     background: rgb(243, 243, 243);
     padding: 1em 8em;
+    padding-top: 90px;
 
     .pokemonList {
         width: 100%;
@@ -52,10 +54,6 @@ $transition: 0.2s all ease-in-out;
             cursor: pointer;
             background: $light-color-hover;
             color: $base-color;
-        }
-
-        a {
-            text-decoration: none;
         }
 
         h1 {
@@ -93,6 +91,24 @@ $transition: 0.2s all ease-in-out;
         &:disabled {
             background: rgb(134, 134, 134);
             color: rgb(80, 80, 80);
+        }
+    }
+}
+
+@media only screen and (max-width: $width) {
+    .appContainer {
+        width: 100%;
+        background: rgb(243, 243, 243);
+        padding: 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .appContainer {
+        padding-top: 160px;
+
+        .pokemonList {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }

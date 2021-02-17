@@ -7,9 +7,9 @@ export default function PokemonsList({ pokemonList, totalPokemons }) {
             <div className={styles.results}>
                 <span>{totalPokemons} pokemons</span>
             </div>
-            {pokemonList.map((pokemonPage, index) => (
+            {pokemonList.map(({ results }, index) => (
                 <div className={styles.pokemonList} key={index}>
-                    {pokemonPage.results.map((pokemon, index) => (
+                    {results.map((pokemon, index) => (
                         <PokemonCard key={index} pokemon={pokemon} />
                     ))}
                 </div>
