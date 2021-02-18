@@ -56,14 +56,23 @@ export default function PokemonDisplay() {
             <div
                 style={{
                     display: 'flex',
+                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
                     background: '#dadada',
                     borderRadius: '20px',
                     height: '600px',
+                    textAlign: 'center',
                 }}
             >
-                <h1>Couldn't find that pokemon!</h1>
+                <h1 style={{ color: '#EE5252' }}>
+                    Couldn't find that pokemon!
+                </h1>
+                <img
+                    src="/pokeball.png"
+                    alt="pokeball"
+                    style={{ height: '100px', marginTop: '30px' }}
+                />
             </div>
         );
 
